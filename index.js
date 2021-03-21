@@ -15,7 +15,7 @@ var farm_cost = 60;
 
 function buyFarm(){
     if (cookiecount >= farm_cost) {
-        cookiecount = cookiecount - farm_cost;
+        cookiecount = Math.round(cookiecount - farm_cost);
         farms = farms +1;
         farm_cps = Math.round(5.5 * farms);
         farm_cost = Math.round(farm_cost * 1.5) ;
@@ -31,8 +31,8 @@ function update(){
     document.title = cookiecount + " Cookies";
     document.getElementById('amountAutoClick').innerHTML = "Auto clickers: " + autoclicker;
     document.getElementById('costAutoCliker').innerHTML = "Auto Clickers cost:  " + autoprice;
-    document.getElementById('auto_cps').innerHTML = "Cookies per secons: " + auto_cps;
-    document.getElementById('bakerPriceText').innerHTML = "Bakerprice: " + bakerprice;
+    document.getElementById('auto_cps').innerHTML = "Cookies per second: " + auto_cps;
+    document.getElementById('bakerPriceText').innerHTML = "Baker cost: " + bakerprice;
     document.getElementById('bakerAmount').innerHTML = "Bakers: " + bakers;
     document.getElementById('cookiePerClick').innerHTML = "Cookies per click: " + cpc;
     document.getElementById('amount_farms').innerHTML = "Farms: " + farms;
@@ -51,7 +51,7 @@ setInterval(timer, 1000)
 
 function buyAutoClicker() {
     if (cookiecount >= autoprice) {
-        cookiecount = cookiecount - autoprice;
+        cookiecount = Math.round(cookiecount - autoprice);
         autoclicker = autoclicker +1;
         auto_cps = Math.round(1.1 * autoclicker);
         autoprice = Math.round(autoprice * 1.5) ;
@@ -83,9 +83,9 @@ function bakeCookie() {
 
 function hireBaker() {
     if(cookiecount >= bakerprice) {
-        cpc += 1.1;
+        cpc = Math.round(cpc + 1.1);
         bakers += 1;
-        cookiecount -=bakerprice;
+        cookiecount = Math.round(cookiecount +bakerprice);
         bakerprice = Math.round(bakerprice * 1.7) ;
         update()
     } else {
