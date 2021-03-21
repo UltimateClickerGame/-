@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0 Cookies</title>
+    <link rel="stylesheet" href="Stysheet.css" />
+    <link rel="icon" href="Cookie_main.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <!-- this links to js -->
+    <div id="stats"></div>
+    <p id="cps">0 cookies per second</p>
+    <p id="text">0 Cookies</p>
+  
+
+    
+    <a href="#" onclick="bakeCookie()"
+      ><img src="Cookie_main.png" class="Cookie_button"
+    /></a>
+ 
+    <!-- this is the cookie code -->
+    <a href="#" onclick="hireBaker()"
+      >
+    <div id="Baker_box">
+    <img src="baker.jpg" id="Baker_pic"
+    />
+    <p id="bakerPriceText">Baker cost: 20</p>
+    <p id="bakerAmount">Bakers: 0</p>
+    <p id="cookiePerClick">Cookies per click: 1</p>
+    </div>
+  </a>
+    <!--this is the baker code-->
+
+  <!--this is auto clicker code-->
+  <a href="#" onclick="buyAutoClicker()">
+    <div id="Auto_box">
+  
+      <img src="cursor.png" id="auto_pic"/>
+    <p id="costAutoCliker">Auto Clickers cost: 12</p>
+    <p id="amountAutoClick">Auto clickers: 0</p>
+    <p id="auto_cps">Cookies per seconds: 0</p>
+  </div>
+  </a>
+  <!--this is auto clicker code-->
+
+
+  <!--This is farm code-->
+  <a href="#" onclick="buyFarm()">
+    <div id="Farm_box">
+      <p id="Farm_cost">Farms cost: 60</p>
+      <p id="amount_farms">Farms: 0</p>
+      <p id="farm_cps">Cookie per second: 0</p>
+      <img src="farm.png" id="farm_pic" >
+    </div>
+  </a>
+  <!--This is farm code-->
+
+
+
+  <!-- farm template
+  <a href="#" onclick="">
+    <div id="#">
+      <p>: 0</p>
+      <p>: 0</p>
+      <p>:0</p>
+      <img src="" >
+    </div>
+  </a>
+  -->
+
+
+
+
+
+
+    <img src="pixel_wood.png" class="right_divide" />
+    <img src="pixel_wood.png" class="left_divde" />
+
+    <a href="#" onclick="save()"><span id="save">Save</span></a>
+    <a href="#" onclick="load()" id="load">Load</a>
+
+
+    
+
+
+  </body>
+</html>
