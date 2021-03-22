@@ -220,10 +220,15 @@ body {
   left: 100px;
   top: 156px;
   margin: 0px;
+  transition: .1s;
 }
 
+
+
 #Ramen_button:active {
-  width: 420px;
+  transform: scale(1.1,1.1)
+  
+  
 }
 
 .separatorRight,
