@@ -7,62 +7,60 @@
     <title>0 Bowls</title>
     <link rel="stylesheet" href="Stysheet.css" />
     <link rel="icon" href="ramen.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    
     <div id="leftd"></div>
     <div id="rightd"></div>
     <script src="index.js"></script>
 
     <div id="stats"></div>
     <div id="stats_1">
-    <p id="bps">0 bowls per second</p>
-    <p id="text">0 bowls</p>
-    <a href="#" onclick="makeBowl()"
-      ><img src="ramen.png" alt="ramen_pic" id="Ramen_button"
-    /></a>
+      <p id="bps">0 Bowls per second</p>
+      <p id="text">0 Bowls</p>
+      <a href="#" onclick="makeBowl()"><img src="ramen.png" alt="ramen_pic" id="Ramen_button" /></a>
     </div>
-    
+
     <!-- this is the cookie code -->
-    <a href="#" onclick="hireChef()"
-      >
-    <div id="chef_box">
-    <img src="baker.jpg" alt="bakerpic" id="chef_pic"/>
-    <p id="chefPrice">Chef cost: 20</p>
-    <p id="chefAmount">Chef: 0</p>
-    <p id="cookiePerClick">Bowls per click: 1</p>
-    </div>
-  </a>
+    <a href="#" onclick="hireChef()">
+      <div id="chef_box">
+        <img src="baker.jpg" alt="bakerpic" id="chef_pic" />
+        <p id="chefPrice">Chefs cost: 20</p>
+        <p id="chefAmount">Chefs: 0</p>
+        <p id="cookiePerClick">Bowls per click: 1</p>
+      </div>
+    </a>
     <!--this is the baker code-->
 
-  <!--this is auto clicker code-->
-  <a href="#" onclick="buyAutoClicker()">
-    <div id="Auto_box">
-    <img src="cursor.png" alt="cursor_pic" id="auto_pic"/>
-    <p id="costAutoCliker">Auto Clickers cost: 12</p>
-    <p id="amountAutoClick">Auto clickers: 0</p>
-    <p id="auto_cps">Cookies per second: 0</p>
-  </div>
-  </a>
-  <!--this is auto clicker code-->
+    <!--this is auto clicker code-->
+    <a href="#" onclick="buyAutoClicker()">
+      <div id="Auto_box">
+        <img src="cursor.png" alt="cursor_pic" id="auto_pic" />
+        <p id="costAutoCliker">Auto Clickers cost: 12</p>
+        <p id="amountAutoClick">Auto clickers: 0</p>
+        <p id="auto_cps">Bowls per second: 0</p>
+      </div>
+    </a>
+    <!--this is auto clicker code-->
 
-  <!--This is farm code-->
-  <a href="#" onclick="buyResturant()">
-    <div id="resturantbox">
-      <p id="resturantcost">Resturants cost: 60</p>
-      <p id="resturantamount">Resturants: 0</p>
-      <p id="resturantcps">Cookie per second: 0</p>
-      <img src="resturant.jpg" alt="resutrant_pic" id="resturantpic" >
-    </div>
-  </a>
-  
-  <div class="separatorRight"></div>
-  <div class="separatorLeft"></div>
-    
+    <!--This is farm code-->
+    <a href="#" onclick="buyResturant()">
+      <div id="resturantbox">
+        <p id="resturantcost">Resturants cost: 60</p>
+        <p id="resturantamount">Resturants: 0</p>
+        <p id="resturantcps">Bowls per second: 0</p>
+        <img src="resturant.jpg" alt="resutrant_pic" id="resturantpic" />
+      </div>
+    </a>
+
+    <div class="separatorRight"></div>
+    <div class="separatorLeft"></div>
 
     <a href="#" onclick="save()"><span id="save">Save</span></a>
     <a href="#" onclick="load()" id="load">Load</a>

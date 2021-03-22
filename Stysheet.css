@@ -1,31 +1,22 @@
 body {
   margin: 0;
   background-image: url(bgBlue.jpg);
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
-
-
-   
-
-
-
 
 /*Auto clicker stuff-------------------------------------------*/
 
-
-
-#Auto_box{
+#Auto_box {
   width: 370px;
   height: 100px;
-  background-color: #275C7E;
-  border: solid #2B6D90 5px;
-  
+  background-color: #275c7e;
+  border: solid #2b6d90 5px;
+
   border-radius: 20px;
   position: fixed;
   right: 10px;
   top: 10px;
 }
-
 
 #auto_pic {
   position: absolute;
@@ -61,15 +52,14 @@ body {
 }
 /*Auto clicker stuff-------------------------------------------*/
 
-
 /*this is baker stuff-----------------------------------*/
-#chef_box{
+#chef_box {
   width: 370px;
   height: 100px;
-  
-  background-color: #275C7E;
-  border: solid #2B6D90 5px;
-  
+
+  background-color: #275c7e;
+  border: solid #2b6d90 5px;
+
   border-radius: 20px;
   position: fixed;
   right: 10px;
@@ -111,17 +101,15 @@ body {
 
 /*Baker stuff---------------------------------------------*/
 
-
-
 /*Farm stuff-------------------------------------------*/
-#resturantbox{
+#resturantbox {
   width: 370px;
   height: 100px;
   position: fixed;
   right: 10px;
   top: 280px;
-  background-color: #275C7E;
-  border: solid #2B6D90 5px;
+  background-color: #275c7e;
+  border: solid #2b6d90 5px;
   border-radius: 20px;
 }
 
@@ -196,7 +184,7 @@ body {
   opacity: 30%;
 }
 
-#save:active{
+#save:active {
   background-color: #317ba3;
   box-shadow: 0 5px #2a6991;
   transform: translateY(4px);
@@ -220,7 +208,7 @@ body {
   bottom: 20px;
 }
 
-#load:active{
+#load:active {
   background-color: #317ba3;
   box-shadow: 0 5px #2a6991;
   transform: translateY(4px);
@@ -236,10 +224,10 @@ body {
 
 #Ramen_button:active {
   width: 420px;
-  
 }
 
-.separatorRight, .separatorLeft{
+.separatorRight,
+.separatorLeft {
   background-image: url(panelVertical.png);
   width: 16px;
   height: 100%;
@@ -247,13 +235,12 @@ body {
   top: 0%;
   bottom: 0;
 }
-.separatorRight{
+.separatorRight {
   right: 400px;
 }
-.separatorLeft{
-  left:30%;
+.separatorLeft {
+  left: 30%;
 }
-
 
 #text {
   color: white;
@@ -262,9 +249,8 @@ body {
   font-size: 40px;
   margin: 0;
   top: 30px;
-  right: 200px
+  right: 200px;
 }
-
 
 #bps {
   color: white;
@@ -279,7 +265,7 @@ body {
   width: 30%;
   height: 150px;
   background-color: black;
-  opacity: .5;
+  opacity: 0.5;
   position: fixed;
   top: 20px;
 }
