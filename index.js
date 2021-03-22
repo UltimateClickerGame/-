@@ -1,95 +1,94 @@
-var cookiecount = 0;
-var cpc = 1;
-var cps = 0;
-var bakerprice = 20;
+var bowlcount = 0;
+var bpc = 1;
+var chefPrice = 20;
 var autoclicker = 0;
-var bakers = 0;
+var chefs = 0;
 var autoprice = 12;
 var auto_cps = 0;
-var farm_cps = 0;
-var farms = 0;
-var farm_cost = 60;
+var resturantcps = 0;
+var resturants = 0;
+var resturantcost = 60;
 
-
-
-
-function buyFarm(){
-    if (cookiecount >= farm_cost) {
-        cookiecount = Math.round(cookiecount - farm_cost);
-        farms = farms +1;
-        farm_cps = Math.round(5.5 * farms);
-        farm_cost = Math.round(farm_cost * 1.5) ;
-        update()  
+function buyResturant(){
+    if (bowlcount >= resturantcost) {
+        bowlcount = Math.round(bowlcount - resturantcost);
+        resturants = resturants +1;
+        resturantcps = Math.round(5.5 * resturants);
+        resturantcost = Math.round(resturantcost * 1.5) ;
+        update();
 }
     else {
-        alert("You dont have enough cookies")
+        alert("You dont have enough cookies");
     }
 }
 
 function update(){
-    document.getElementById('text').innerHTML = cookiecount + " Cookies";
-    document.title = cookiecount + " Cookies";
+    document.getElementById('text').innerHTML = bowlcount + " Bowls";
+    document.title = bowlcount + " Bowls";
     document.getElementById('amountAutoClick').innerHTML = "Auto clickers: " + autoclicker;
     document.getElementById('costAutoCliker').innerHTML = "Auto Clickers cost:  " + autoprice;
-    document.getElementById('auto_cps').innerHTML = "Cookies per second: " + auto_cps;
-    document.getElementById('bakerPriceText').innerHTML = "Baker cost: " + bakerprice;
-    document.getElementById('bakerAmount').innerHTML = "Bakers: " + bakers;
-    document.getElementById('cookiePerClick').innerHTML = "Cookies per click: " + cpc;
-    document.getElementById('amount_farms').innerHTML = "Farms: " + farms;
-    document.getElementById('farm_cps').innerHTML = "Cookie per second: " + farm_cps;
-    document.getElementById('Farm_cost').innerHTML = "Farms cost: " + farm_cost;
-    document.getElementById('cps').innerHTML = (farm_cps+auto_cps) + " cookies per second";
+    document.getElementById('auto_cps').innerHTML = "Bowls per second: " + auto_cps;
+    document.getElementById('chefPrice').innerHTML = "Chefs cost: " + chefPrice;
+    document.getElementById('chefAmount').innerHTML = "chefs: " + chefs;
+    document.getElementById('cookiePerClick').innerHTML = "Bowls per click: " + bpc;
+    document.getElementById('resturantamount').innerHTML= "Resturants: " + resturants;
+    document.getElementById('resturantcps').innerHTML = "Bowls per second: " + resturantcps;
+    document.getElementById('resturantcost').innerHTML = "resturants cost: " + resturantcost;
+    document.getElementById('bps').innerHTML = (auto_cps + resturantcps) + " bowls per second"; 
 }
 
 function timer() {
-    cookiecount += auto_cps;
-    cookiecount += farm_cps;
-    update()
+    bowlcount += auto_cps;
+    bowlcount += resturantcps;
+    update();
 }
 
-setInterval(timer, 1000)
+setInterval(timer, 1000);
 
 function buyAutoClicker() {
-    if (cookiecount >= autoprice) {
-        cookiecount = Math.round(cookiecount - autoprice);
-        autoclicker = autoclicker +1;
+    if (bowlcount >= autoprice) {
+        bowlcount = bowlcount - autoprice;
+        autoclicker += 1;
         auto_cps = Math.round(1.1 * autoclicker);
-        autoprice = Math.round(autoprice * 1.5) ;
-        update()
+        autoprice = Math.round(autoprice * 1.5);
+        update();
     }else {
-        alert("You dont have enough cookies")
+        alert("You dont have enough cookies");
     }
 }
 
 function save() {
-    localStorage.setItem("cookiecount", cookiecount);
-    localStorage.setItem("autoClick", autoclicker);
+    localStorage.setItem("bowls", bowlcount);
+    localStorage.setItem("resturants", resturants);
+    localStorage.setItem("Clickers", autoclicker);
+    update();
 }
 
 function load() {
-    cookiecount = localStorage.getItem("cookiecount");
-    cookiecount = parseInt(cookiecount);
-    autoclicker = localStorage.getItem("autoClick");
-    autoclicker = parseInt(autoclicker);
-    update()
+    bowlcount = localStorage.getItem("bowls");
+    bowlcount = parseInt(bowlcount);
+    bowlcount = localStorage.getItem("Clickers");
+    bowlcount = parseInt(autoclicker);
+    bowlcount = localStorage.getItem("resturants");
+    bowlcount = parseInt(resturants);
+
+    update();
 }
 
-function bakeCookie() {
-    cookiecount += cpc;
-    document.getElementById('text').innerHTML = cookiecount + " Cookies";
-    document.title = cookiecount + " Cookies";
-
+function makeBowl() {
+    bowlcount += bpc;
+    update();
 }
 
-function hireBaker() {
-    if(cookiecount >= bakerprice) {
-        cpc = Math.round(cpc + 1.1);
-        bakers += 1;
-        cookiecount = Math.round(cookiecount +bakerprice);
-        bakerprice = Math.round(bakerprice * 1.7) ;
-        update()
+function hireChef() {
+    if(bowlcount >= chefPrice) {
+        bpc = Math.round(bpc + 1.1);
+        chefs += 1;
+        bowlcount = Math.round(bowlcount - chefPrice);
+        chefPrice = Math.round(chefPrice * 1.7) ;
+        update();
     } else {
-        alert("You dont have enough cookies")
+        alert("You dont have enough cookies");
     }
 
     

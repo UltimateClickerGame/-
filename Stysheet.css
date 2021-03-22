@@ -1,23 +1,31 @@
 body {
   margin: 0;
-  background-image: url("Background.png");
-  background-color: black;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Roboto Mono', monospace;
+  background-image: url(bgBlue.jpg);
+  font-family: 'Merriweather', serif;
 }
 
+
+   
+
+
+
+
 /*Auto clicker stuff-------------------------------------------*/
+
+
 
 #Auto_box{
   width: 370px;
   height: 100px;
-  background-color: lightgray;
+  background-color: #275C7E;
+  border: solid #2B6D90 5px;
+  
+  border-radius: 20px;
   position: fixed;
   right: 10px;
   top: 10px;
-  border: solid gray 5px;
-  border-radius: 20px;
 }
+
 
 #auto_pic {
   position: absolute;
@@ -32,7 +40,7 @@ body {
   position: absolute;
   top: 50px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
@@ -40,7 +48,7 @@ body {
   position: absolute;
   top: 30px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
@@ -48,19 +56,20 @@ body {
   position: absolute;
   top: 10px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 /*Auto clicker stuff-------------------------------------------*/
 
 
 /*this is baker stuff-----------------------------------*/
-#Baker_box{
+#chef_box{
   width: 370px;
   height: 100px;
-  background-color: lightgray;
   
-  border: solid gray 5px;
+  background-color: #275C7E;
+  border: solid #2B6D90 5px;
+  
   border-radius: 20px;
   position: fixed;
   right: 10px;
@@ -71,27 +80,27 @@ body {
   position: absolute;
   top: 10px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
-#bakerPriceText {
+#chefPrice {
   position: absolute;
   top: 30px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
-#bakerAmount {
+#chefAmount {
   position: absolute;
   top: 50px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
-#Baker_pic {
+#chef_pic {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -105,46 +114,46 @@ body {
 
 
 /*Farm stuff-------------------------------------------*/
-#Farm_box{
+#resturantbox{
   width: 370px;
   height: 100px;
-  background-color: lightgray;
   position: fixed;
   right: 10px;
   top: 280px;
-  border: solid gray 5px;
+  background-color: #275C7E;
+  border: solid #2B6D90 5px;
   border-radius: 20px;
 }
 
-#farm_pic {
+#resturantpic {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 110px;
+  width: 80px;
   border-radius: 10px;
 }
 
-#farm_cps {
+#resturantcps {
   position: absolute;
   top: 50px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
-#Farm_cost {
+#resturantcost {
   position: absolute;
   top: 30px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
-#amount_farms {
+#resturantamount {
   position: absolute;
   top: 10px;
   right: 20px;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 /*Farm stuff-------------------------------------------*/
@@ -159,17 +168,37 @@ body {
   outline: none;
   color: black;
   position: fixed;
-  background-color: lightgray;
+  background-color: #317ba3;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px gray;
+  box-shadow: 0 9px #2a6991;
   right: 10px;
   bottom: 20px;
 }
 
+#leftd {
+  width: 400px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: black;
+  opacity: 30%;
+}
+
+#rightd {
+  width: 30%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: black;
+  opacity: 30%;
+}
+
 #save:active{
-  background-color: lightgray;
-  box-shadow: 0 5px gray;
+  background-color: #317ba3;
+  box-shadow: 0 5px #2a6991;
   transform: translateY(4px);
 }
 
@@ -183,73 +212,81 @@ body {
   outline: none;
   color: black;
   position: fixed;
-  background-color: lightgray;
+  background-color: #317ba3;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px gray;
+  box-shadow: 0 9px #2a6991;
   right: 130px;
   bottom: 20px;
 }
 
 #load:active{
-  background-color: lightgray;
-  box-shadow: 0 5px gray;
+  background-color: #317ba3;
+  box-shadow: 0 5px #2a6991;
   transform: translateY(4px);
 }
 
-.Cookie_button {
+#Ramen_button {
   width: 400px;
   position: fixed;
-  top: 150px;
-  margin: 0;
-  left: 70px;  
+  left: 100px;
+  top: 156px;
+  margin: 0px;
 }
 
-.Cookie_button:active {
-  width: 380px;
+#Ramen_button:active {
+  width: 420px;
+  
 }
 
-.left_divde {
-  width: 30px;
-  position: fixed;
-  object-fit: cover;
+.separatorRight, .separatorLeft{
+  background-image: url(panelVertical.png);
+  width: 16px;
   height: 100%;
-  left: 500px;
-  top: 0px;
-}
-
-.right_divide {
-  width: 30px;
   position: absolute;
-  object-fit: cover;
-  height: 100%;
-  right: 400px;
-  top: 0px;
+  top: 0%;
+  bottom: 0;
 }
+.separatorRight{
+  right: 400px;
+}
+.separatorLeft{
+  left:30%;
+}
+
 
 #text {
   color: white;
   font-size: 50px;
-  position: fixed;
-  left: 140px;
-  top: 0;
+  position: absolute;
   font-size: 40px;
+  margin: 0;
+  top: 30px;
+  right: 200px
 }
 
-#cps {
+
+#bps {
   color: white;
   font-size: 40px;
-  position: fixed;
-  top: 100px;
-  left: 120px;
+  position: absolute;
+  bottom: 30px;
+  right: 200px;
   font-size: 20px;
 }
 
 #stats {
-  width: 500px;
+  width: 30%;
   height: 150px;
   background-color: black;
   opacity: .5;
+  position: fixed;
+  top: 20px;
+}
+#stats_1 {
+  width: 30%;
+  height: 150px;
+  margin: 0;
   position: fixed;
   top: 20px;
 }
