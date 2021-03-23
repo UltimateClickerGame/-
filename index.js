@@ -8,13 +8,32 @@ var auto_cps = 0;
 var resturantcps = 0;
 var resturants = 0;
 var resturantcost = 60;
+var n2xcost = 200;
+var n2x = 0;
+
+
+
+
+
+
 
 function buyResturant() {
   if (bowlcount >= resturantcost) {
     bowlcount = Math.round(bowlcount - resturantcost);
     resturants = resturants + 1;
-    resturantcps = Math.round(5.5 * resturants);
+    resturantcps = Math.round(5.5 * resturants) ;
     resturantcost = Math.round(resturantcost * 1.5);
+    update();
+  } else {
+    alert("You dont have enough cookies");
+  }
+}
+
+function buyn2x() {
+  if (bowlcount >= n2xcost) {
+    bowlcount = Math.round(bowlcount - n2xcost);
+    n2x = n2x + 1;
+    n2xcost = Math.round(n2xcost * 1.5)
     update();
   } else {
     alert("You dont have enough cookies");
@@ -34,6 +53,9 @@ function update() {
   document.getElementById("resturantcps").innerHTML = "Bowls per second: " + resturantcps;
   document.getElementById("resturantcost").innerHTML = "Resturants cost: " + resturantcost;
   document.getElementById("bps").innerHTML = auto_cps + resturantcps + " bowls per second";
+  document.getElementById("n2xPrice").innerHTML = "2x upgrade costs:" + n2xcost;
+  document.getElementById("n2xAmount").innerHTML = "upgrades:" + n2x;
+  
 }
 
 function timer() {
@@ -76,7 +98,7 @@ function load() {
 
 function makeBowl() {
   bowlcount += bpc;
-  update();
+  update()
 }
 
 function hireChef() {
