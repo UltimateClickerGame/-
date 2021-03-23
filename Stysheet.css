@@ -232,7 +232,7 @@ html,body {
 
 #Ramen_button {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   width: 300px;
   left:50%;
@@ -282,7 +282,7 @@ html,body {
   position: relative;
   font-size: 40px;
   margin: auto;
-  top: 250px;
+  top: 230px;
 }
 
 #bps {
@@ -382,4 +382,4 @@ html,body {
   left: 0;
   top: 0;
   height: 100%;
-  
+}
