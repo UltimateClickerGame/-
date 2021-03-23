@@ -14,51 +14,61 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
       rel="stylesheet"
     />
-   
   </head>
   <body>
-  
     <div id="leftd"></div>
     <div id="rightd"></div>
     <div id="topd"></div>
     <div id="bottd"></div>
-    
-    <div class="sepRight"></div>
-    <div class="sepLeft"></div>
-    <div class="sepTop"></div>
-    <div class="sepBot"></div>
-    
-    <div id="imgcnt">
-      <p id="bps">0 bowls per second</p>
-      <p id="text">0 Bowls</p>
-      <a href="#" onclick="makeBowl()"><img src="ramen.png" alt="ramen_pic" id="Ramen_button" /></a>
-    </div>
 
-    <!-- this is the cookie code -->
+    <div id="leftd1"></div>
+    <div id="rightd1"></div>
+    
     <a href="#" onclick="hireChef()">
-      <div id="chef_box">
+      <div id="chef_box" class="chef">
         <img src="baker.jpg" alt="bakerpic" id="chef_pic" />
         <p id="chefPrice">Chefs cost: 20</p>
         <p id="chefAmount">Chefs: 0</p>
         <p id="cookiePerClick">Bowls per click: 1</p>
       </div>
     </a>
-    <!--this is the baker code-->
 
-    <!--this is auto clicker code-->
-    <a href="#" onclick="buyAutoClicker()" >
-      <div id="Auto_box">
+
+    <div id="topd1">
+      <a href="#" onclick="buymultiplier()">
+        <div id="n2xbox" class="multi">
+          <p id="n2xtitle">Multipliers</p>
+          <p id="multiplierPrice">Costs: 200</p>
+          <p id="multiplierAmount">Amount: 0</p>
+          <p id="n2xdescript"></p>
+        </div>
+      </a>
+    </div>
+
+    <div id="bottd1"></div>
+
+    <div class="sepRight"></div>
+    <div class="sepLeft"></div>
+    <div class="sepTop"></div>
+    <div class="sepBot"></div>
+
+    <div id="imgcnt">
+      <p id="bps">0 bowls per second</p>
+      <p id="text">0 Bowls</p>
+      <a href="#" onclick="makeBowl()"><img src="ramen.png" alt="ramen_pic" id="Ramen_button" /></a>
+    </div>
+
+    <a href="#" onclick="buyAutoClicker()">
+      <div id="Auto_box" class="click">
         <img src="cursor.png" alt="cursor_pic" id="auto_pic" />
         <p id="costAutoCliker">Auto Clickers cost: 12</p>
         <p id="amountAutoClick">Auto clickers: 0</p>
         <p id="auto_cps">Bowls per second: 0</p>
       </div>
     </a>
-    <!--this is auto clicker code-->
 
-    <!--This is farm code-->
-    <a href="#" onclick="buyResturant()" >
-      <div id="resturantbox">
+    <a href="#" onclick="buyResturant()">
+      <div id="resturantbox" class="rest">
         <p id="resturantcost">Resturants cost: 60</p>
         <p id="resturantamount">Resturants: 0</p>
         <p id="resturantcps">Bowls per second: 0</p>
@@ -66,22 +76,12 @@
       </div>
     </a>
 
-    <a href="#" onclick="buyn2x()">
-      <div id="n2xbox">
-        <p id="n2xtitle">2x</p>
-        <p id="n2xPrice">2x upgrade costs: 200</p>
-        <p id="n2xAmount">upgrades: 0</p>
-        <p id="n2xdescript">2x resturant</p>
-      </div>
-    </a>
-
     <a href="#" onclick="save()" id="save">Save</a>
     <a href="#" onclick="load()" id="load">Load</a>
 
-    
-    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="index.js"></script>
     <script src="tooltip.js"></script>
-    
   </body>
 </html>
