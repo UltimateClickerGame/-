@@ -24,9 +24,10 @@ function update() {
   document.getElementById("resturantamount").innerHTML = "Resturants: " + resturants;
   document.getElementById("resturantcps").innerHTML = "Bowls per second: " + resturantcps;
   document.getElementById("resturantcost").innerHTML = "Resturants cost: " + resturantcost;
-  document.getElementById("bps").innerHTML = (auto_cps + resturantcps) * multipliervalue + " bowls per second";
+  document.getElementById("bps").innerHTML =
+    (auto_cps + resturantcps) * multipliervalue + " bowls per second";
   document.getElementById("multiplierPrice").innerHTML = "Costs: " + multipliercost;
-  document.getElementById("multiplierAmount").innerHTML = "Amount: " + multiplier;  
+  document.getElementById("multiplierAmount").innerHTML = "Amount: " + multiplier;
 }
 
 function timer() {
@@ -54,7 +55,6 @@ function hireChef() {
   }
 }
 
-
 function buymultiplier() {
   if (bowlcount >= multipliercost) {
     bowlcount = Math.round(bowlcount - multipliercost);
@@ -71,7 +71,7 @@ function buyResturant() {
   if (bowlcount >= resturantcost) {
     bowlcount = Math.round(bowlcount - resturantcost);
     resturants = resturants + 1;
-    resturantcps = Math.round((5.5 * resturants) * multipliervalue) ;
+    resturantcps = Math.round(5.5 * resturants * multipliervalue);
     resturantcost = Math.round(resturantcost * 1.5);
     update();
   } else {
@@ -107,4 +107,3 @@ function load() {
   bowlcount = parseInt(resturants);
   update();
 }
-
