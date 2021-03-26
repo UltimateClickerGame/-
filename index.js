@@ -37,6 +37,8 @@ function timer() {
 }
 
 setInterval(timer, 1000);
+setInterval(save, 10000);
+setInterval(load, 10000);
 
 function makeBowl() {
   bowlcount += bpc;
@@ -92,18 +94,57 @@ function buyAutoClicker() {
 }
 
 function save() {
-  localStorage.setItem("bowls", bowlcount);
-  localStorage.setItem("resturants", resturants);
-  localStorage.setItem("Clickers", autoclicker);
+  localStorage.setItem("bowlcount",bowlcount );
+  localStorage.setItem("bpc",bpc );
+  localStorage.setItem("chefPrice",chefPrice );
+  localStorage.setItem("autoclicker",autoclicker );
+  localStorage.setItem("chefs",chefs );
+  localStorage.setItem("autoprice",autoprice );
+  localStorage.setItem("auto_cps",auto_cps );
+  localStorage.setItem("resturantcps",resturantcps );
+  localStorage.setItem("resturants",resturants );
+  localStorage.setItem("resturantcost",resturantcost );
+  localStorage.setItem("multipliercost",multipliercost );
+  localStorage.setItem("multiplier",multiplier );
+  localStorage.setItem("multipliervalue",multipliervalue );
   update();
 }
 
 function load() {
-  bowlcount = localStorage.getItem("bowls");
-  bowlcount = parseInt(bowlcount);
-  bowlcount = localStorage.getItem("Clickers");
-  bowlcount = parseInt(autoclicker);
+  bowlcount = localStorage.getItem("bowlcount ");
+  bowlcount = parseInt(bowlcount );
+  bowlcount = localStorage.getItem("bpc ");
+  bowlcount = parseInt(bpc );
+  bowlcount = localStorage.getItem("chefPrice ");
+  bowlcount = parseInt(chefPrice );
+  bowlcount = localStorage.getItem("autoclicker ");
+  bowlcount = parseInt(autoclicker );
+  bowlcount = localStorage.getItem("chefs ");
+  bowlcount = parseInt(chefs );
+  bowlcount = localStorage.getItem("autoprice");
+  bowlcount = parseInt(autoprice);
+  bowlcount = localStorage.getItem("auto_cps");
+  bowlcount = parseInt(auto_cps);
+  bowlcount = localStorage.getItem("resturantcps");
+  bowlcount = parseInt(resturantcps);
   bowlcount = localStorage.getItem("resturants");
   bowlcount = parseInt(resturants);
-  update();
+  bowlcount = localStorage.getItem("resturantcost");
+  bowlcount = parseInt(resturantcost);
+  bowlcount = localStorage.getItem("multipliercost ");
+  bowlcount = parseInt(multipliercost );
+  bowlcount = localStorage.getItem("multiplier ");
+  bowlcount = parseInt(multiplier );
+  bowlcount = localStorage.getItem("multipliervalue ");
+  bowlcount = parseInt(multipliervalue );
 }
+
+
+
+
+
+
+
+
+
+
